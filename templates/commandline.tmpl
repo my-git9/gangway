@@ -88,6 +88,10 @@ $ sudo mv ./kubectl /usr/local/bin/kubectl
             </div>
             <pre>
                <code class="language-bash">
+The Id token is：
+{{ .IDToken }}
+
+
 echo "{{ .ClusterCA }}" \ > "ca-{{ .ClusterName }}.pem"
 kubectl config set-cluster "{{ .ClusterName }}" --server={{ .APIServerURL }} --certificate-authority="ca-{{ .ClusterName }}.pem" --embed-certs
 kubectl config set-credentials "{{ .KubeCfgUser }}"  \
